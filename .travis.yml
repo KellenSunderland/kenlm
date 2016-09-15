@@ -1,0 +1,20 @@
+# Enable C++ support
+language: cpp
+
+# Compiler selection
+os: linux
+dist: trusty
+before_script:
+  - sudo apt-get update -qq
+  - sudo apt-get install libboost-all-dev
+compiler:
+  - clang
+  - gcc
+script:
+  - mkdir build
+  - cd build
+<<<<<<< HEAD
+  - cmake .. && make -j 4
+=======
+  - cmake .. && make
+>>>>>>> 5dd6db817b190578c3338226a5f8eed17d96b523
