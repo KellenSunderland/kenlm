@@ -13,8 +13,4 @@ compiler:
 script:
   - mkdir build
   - cd build
-<<<<<<< HEAD
   - cmake .. && make -j 4
-=======
-  - cmake .. && make
->>>>>>> 5dd6db817b190578c3338226a5f8eed17d96b523

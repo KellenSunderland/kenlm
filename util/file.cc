@@ -530,7 +530,7 @@ std::FILE *FMakeTemp(const StringPiece &base) {
 std::string DefaultTempDirectory() {
 #if defined(_WIN32) || defined(_WIN64)
   char dir_buffer[1000];
-  if (GetTempPath(1000, dir_buffer) == 0)
+  if (GetTempPathA(1000, dir_buffer) == 0)
     throw std::runtime_error("Could not read temporary directory.");
   std::string ret(dir_buffer);
   NormalizeTempPrefix(ret);
